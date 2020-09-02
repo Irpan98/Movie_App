@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie App</string>
+    <string name="nameMovie">movie_name</string>
+    <string name="image">image</string>
+    <string name="synopsisLabel">Description</string>
+    <string name="tidak_ada_deskripsi">Tidak Ada Deskripsi</string>
+</resources>

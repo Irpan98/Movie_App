@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="14dp"
+    android:layout_marginTop="14dp"
+    android:background="@android:color/white">
+
+    <RelativeLayout xmlns:tool="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <View
+            android:id="@+id/ivPoster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:background="@color/placeholder_bg" />
+
+        <View
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/ivPoster"
+            android:background="@color/placeholder_bg"
+
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/tvDate"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tvTitle"
+            android:layout_alignStart="@+id/tvTitle"
+            android:layout_marginTop="4dp"
+            android:background="@color/placeholder_bg"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            tool:text="20 Maret 1998" />
+
+        <View
+            android:id="@+id/tvOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@id/tvDate"
+            android:layout_alignStart="@+id/tvDate"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+
+            android:background="@color/placeholder_bg"
+            android:maxLines="4"
+            android:paddingStart="0dp"
+            tool:text="@tools:sample/lorem/random" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
