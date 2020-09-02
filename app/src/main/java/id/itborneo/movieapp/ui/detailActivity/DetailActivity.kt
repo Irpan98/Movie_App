@@ -1,6 +1,7 @@
 package id.itborneo.movieapp.ui.detailActivity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import id.itborneo.movieapp.R
 import id.itborneo.movieapp.data.model.MovieItem
@@ -26,7 +27,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun attachView(movieItem: MovieItem?) {
         tvTitle.text = movieItem?.name
-
+        Log.d("DetailActivity"," link ${movieItem?.posterPath}")
         setPoster(this, movieItem?.posterPath, ivPoster)
 
         val description = movieItem?.description
