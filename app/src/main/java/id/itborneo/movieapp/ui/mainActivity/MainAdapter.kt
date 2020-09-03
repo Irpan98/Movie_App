@@ -23,7 +23,7 @@ class MainAdapter(private val context: Context, private val clickListener: (Movi
             }
 
             override fun areContentsTheSame(oldItem: MovieItem, newItem: MovieItem): Boolean {
-                return oldItem == oldItem
+                return oldItem == newItem
             }
 
         }

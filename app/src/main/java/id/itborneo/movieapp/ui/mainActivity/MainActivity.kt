@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
 
         rvMovies.adapter = adapter
 
-
     }
 
     private fun moveActivty(movie: MovieItem) {

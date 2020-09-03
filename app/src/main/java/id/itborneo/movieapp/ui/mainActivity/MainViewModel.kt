@@ -8,9 +8,11 @@ import id.itborneo.movieapp.data.model.MovieItem
 
 class MainViewModel : ViewModel() {
 
+    private val movieRepository = MovieRepository
+
 
     fun getMovie(): LiveData<PagedList<MovieItem>> {
-        return MovieRepository().getMovies()
+        return movieRepository.getMovies()
     }
 
 }

@@ -9,9 +9,14 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 object MovieDataSource : PageKeyedDataSource<Int, MovieItem>() {
+    var service: ApiServices
 
 
-    var service: ApiServices = ApiClient.create()
+    init {
+
+        service = ApiClient.create()
+    }
+
 
     private val TAG = "MovieDataSource"
     override fun loadInitial(
@@ -32,7 +37,8 @@ object MovieDataSource : PageKeyedDataSource<Int, MovieItem>() {
 
 
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, MovieItem>) {
-        service.getMovie(1, params.requestedLoadSize)
+
+        service.getMovie(params.key, params.requestedLoadSize)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ movieResponse ->

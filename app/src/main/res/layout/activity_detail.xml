@@ -78,10 +78,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tvLabelOverview"
             tools:text="asdsadasdasd asdasdsad" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            app:layout_constraintTop_toBottomOf="@+id/rvCast" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
